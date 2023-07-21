@@ -221,3 +221,8 @@
     margin-left: 0px;
   }
 }
+@media  screen and (max-width:400px) {
+  .container2{
+    width: min-content;
+  }
+}
