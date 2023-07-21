@@ -195,6 +195,9 @@
 
 @media screen and (max-width: 760px) {
   .container1{
+    width: min-content;
+  }
+  .container1{
     padding: 25px;
   }
   .container1 .wrapper1{
@@ -211,6 +214,9 @@
 
 
 @media screen and (max-width: 500px) {
+  .container1{
+    width: min-content;
+  }
   .controls1 button{
     width: 100%;
     margin-bottom: 10px;
@@ -222,8 +228,8 @@
     margin-left: 0px;
   }
 }
-@media  screen and (max-width:400px) {
-  .container1{
-    width: min-content;
-  }
-}
+// @media  screen and (max-width:400px) {
+//   .container1{
+//     width: min-content;
+//   }
+// }
