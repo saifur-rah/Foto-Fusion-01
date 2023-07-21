@@ -52,9 +52,9 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
 if (process.env.NODE_ENV === "PRODUCTION") {
   // set static folder
-  app.use(express.static(path.join(__dirname, '/client/dist')));
+  app.use(express.static(path.join(__dirname, '../client/dist')));
   app.get("*", (req, res) =>
-    res.sendFile(path.join(__dirname, "/client/dist/index.html"))
+    res.sendFile(path.join(__dirname, "../client/dist/index.html"))
   );
 } else {
   app.get("/", (req, res) => {
