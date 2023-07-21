@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon index.js"
   },
-  "author": "Faiz Iqbal",
+  "author": "Saifur Rahman",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
