@@ -67,7 +67,7 @@ app.use("/api/users", userRoute);
  //    res.sendFile(path.join(__dirname, "../client/dist/index.html"))
  //  );
 
-
+__dirname=path.resolve();
    app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
 if (process.env.NODE_ENV === 'PRODUCTION') {
