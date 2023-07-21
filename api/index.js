@@ -47,7 +47,7 @@ app.use("/api/users", userRoute);
 //   app.use(express.static(path.join(__dirname, '/client/dist')));
 
   // app.get('*', (req, res) =>
-  //   res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
+    // res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
 //   );
 
 // if (process.env.NODE_ENV === "PRODUCTION") {
@@ -71,10 +71,10 @@ __dirname=path.resolve();
    app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
 if (process.env.NODE_ENV === 'PRODUCTION') {
-  app.use(express.static(path.join(__dirname, '/client/dist')));
+  app.use(express.static(path.join(__dirname, '../client/dist')));
 
   app.get('*', (req, res) =>
-    res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
+    res.sendFile(path.resolve(__dirname, '../client', 'dist', 'index.html'))
 
   );
 } else {
