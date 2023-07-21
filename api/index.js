@@ -38,21 +38,23 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 
-// if (process.env.NODE_ENV === "PRODUCTION") {
-//   // set static folder
-//   app.use(express.static(path.join(__dirname, '../client/dist')));
-//   app.get("*", (req, res) =>
-//     res.sendFile(path.join(__dirname, "../client/dist/index.html"))
-//   );
+
 //saif edit
-const __dirname = path.resolve();
-app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
+// const __dirname = path.resolve();
+// app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
-if (process.env.NODE_ENV === 'production') {
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static(path.join(__dirname, '/client/dist')));
+
+//   app.get('*', (req, res) =>
+//     res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
+//   );
+
+if (process.env.NODE_ENV === "PRODUCTION") {
+  // set static folder
   app.use(express.static(path.join(__dirname, '/client/dist')));
-
-  app.get('*', (req, res) =>
-    res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'))
+  app.get("*", (req, res) =>
+    res.sendFile(path.join(__dirname, "/client/dist/index.html"))
   );
 } else {
   app.get("/", (req, res) => {
