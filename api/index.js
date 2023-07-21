@@ -70,7 +70,7 @@ app.use("/api/users", userRoute);
 
    app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'PRODUCTION') {
   app.use(express.static(path.join(__dirname, '/client/dist')));
 
   app.get('*', (req, res) =>
